@@ -1,0 +1,46 @@
+############ RAFILEMON Config File rafilemoncfg
+
+# Files  ###################################################################################################################################
+#findfile:ID: FileLoc   : FileName(use %m,%d,%y for MM,DD,YY)  :Freq
+findfile:Oracle1:/opt/oracle/admin/crmprod/bdump:alert_crmprod.log:2M
+findfile:Oracle2:/opt/oracle/app/product/9.2.0.5/CRM_PROD/network/admin:sqlnet.log:2M
+findfile:Oracle3:/opt/oracle/app/product/9.2.0.5/CRM_PROD/network/log:sqlnet.log:2M
+findfile:Oracle3:/opt/oracle/app/product/9.2.0.5/CRM_PROD/network/log:listener.log:2M
+findfile:Oracle3:/opt/oracle/app/product/9.2.0.5/CRM_PROD/network/log:lis_crmprod.log:2M
+
+#findfile:PSAS1:/opt/psoft/crmprod/appserv/crmprod/LOGS:TUXLOG.%m%d%y:2M
+##findfile:PSAS1:/opt/psoft/crmprod/appserv/crmprod/LOGS:APPSRV_%m%d.LOG:2M
+
+#findfile:PSPS1:/opt/psoft/crmprod/appserv/prcs/crmprod/LOGS:SCHDLR_%m%d.LOG:2M
+#findfile:PSPS1:/opt/psoft/crmprod/appserv/prcs/crmprod/LOGS:TUXLOG.%m%d%y:2M
+#findfile:PSPS2:/opt/psoft/crmprod/appserv/prcs/crmprod/LOGS:DSTAGNT_%m%d.LOG:2M
+
+
+#findfile:PSWS1:/opt/psoft/crmprod/webserv/CRMPROD/logs:PIA_stderr.log:2M
+#findfile:PSWS2:/opt/psoft/crmprod/webserv/CRMPROD/logs:PIA_stdout.log:2M
+
+
+# Words ###################################################################################################################################
+#findword:File ID:Word:      ErrorSubj: ErrorBody:ErrorEmailAdd_ID
+findword:Oracle1:ORA-:Ora Error:Ora Error:1
+findword:Oracle2:error 12514:error 12514 Found:error 12514 Found:1
+findword:Oracle3:TNS-:TNS- Error Found:TNS- Error Found:1
+
+
+#findword:PSAS1:rror:Error Found:Error Found:1
+
+#findword:PSPS1:rror:Error Found:Error Found:1
+#findword:PSPS2:Failure:Failure Found:Failure Found:1
+
+#findword:PSWS1:Error:Error Found:Error Found:1
+#findword:PSWS2:TPESVCERR:TPESVCERR Error Found:TPESVCERR Error Found:1
+
+
+##findword:PSTEST:error:error Error Found:error Error Found:1
+
+
+# Email Addresses ##########################################################################################################################
+#emailadd:ID:EmailAddress
+emailadd:0:page-dba@packet8.net
+emailadd:1:page-dba@packet8.net,rarora@8x8.com,bswaminathan@8x8.com
+emailadd:2:ndrarora@yahoo.com

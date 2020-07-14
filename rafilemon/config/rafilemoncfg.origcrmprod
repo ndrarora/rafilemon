@@ -1,0 +1,23 @@
+############ RAFILEMON Config File rafilemoncfg
+
+# Files  ###################################################################################################################################
+#findfile:SN: FileLoc   : FileName  :Freq
+findfile:Oracle1:/opt/oracle/admin/crmprod/bdump:alert_crmprod.log:2M
+findfile:Oracle2:/opt/oracle/app/product/9.2.0.5/CRM_PROD/network/log:listener.log:2M
+findfile:Oracle2:/opt/oracle/app/product/9.2.0.5/CRM_PROD/network/log:lis_crmprod.log:2M
+
+
+# Words ###################################################################################################################################
+#findword:File SN:Word:      ErrorSubj: ErrorBody:ErrorEmailAdd_SN
+findword:Oracle1:ORA-:Ora Error:Ora Error:0
+findword:Oracle2:ORA-:Ora Error:Ora Error:0
+findword:Oracle2:TNS-:TNS Error:TNS Error:0
+
+
+# Email Addresses ##########################################################################################################################
+#emailadd:SN:EmailAddress
+emailadd:0:page-rajesh@packet8.net,rarora@8x8.com
+emailadd:1:rarora@8x8.com
+emailadd:2:ndrarora@yahoo.com
+
+
